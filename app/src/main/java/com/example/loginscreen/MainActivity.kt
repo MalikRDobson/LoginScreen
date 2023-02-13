@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MusicPlayer::class.java)
             startService(intent)
         }
+        btnContacts.setOnClickListener {
+            val intent = Intent(this, ContactActivity::class.java)
+            startActivity(intent)
+        }
 
         val batteryReceiver = BatteryNotify()
         applicationContext.registerReceiver(
